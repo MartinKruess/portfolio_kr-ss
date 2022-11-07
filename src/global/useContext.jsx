@@ -7,7 +7,7 @@ const lsLanguage = localStorage.getItem('lang')
 
 // ----------------- USER -----------------
 export const SideSetting = ({ children }) => {
-    const [language, setLanguage] = useState(lsLanguage || false)
+    const [language, setLanguage] = useState(JSON.parse(lsLanguage) || false)
 
   // Handle userData and jwt-Token by change
   useEffect(() => {
