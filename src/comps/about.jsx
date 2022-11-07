@@ -50,7 +50,7 @@ export const About = () => {
             <article className="aboutRight">
                 <div className="imgContainer"><img src="/images/preview.png" alt="" /></div>
                 <p className="contextRight">
-                    {language ? ("Hi, my name is Martin Krüss, but you can just call me Martin. I am {age} years old and used the Corona crisis to further educate myself as a full stack web and software developer.") : ("Hi ich heiße Martin Krüss, aber Sie können mich einfach Martin nennen. Ich bin {age} Jahre alt und habe die Corona Kriese genutzt um mich zum Fullstack Web- und Software Developer weiter zu bilden.")}
+                    {language ? (`Hi, my name is Martin Krüss, but you can just call me Martin. I am ${age} years old and used the Corona crisis to further educate myself as a full stack web and software developer.`) : (`Hi ich heiße Martin Krüss, aber Sie können mich einfach Martin nennen. Ich bin ${age} Jahre alt und habe die Corona Kriese genutzt um mich zum Fullstack Web- und Software Developer weiter zu bilden.`)}
                     <br /><br />
                     {language ? ("In the last year, I have preferred to deal with the MERN stack and have implemented a number of smaller and larger projects with it.") : ("Im letzten Jahr habe ich mich bevorzugt mit dem MERN-Stack auseinader gesetzt und einige kleiner und größere projekte damit verwirklicht.")}
                 </p>
