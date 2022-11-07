@@ -1,4 +1,8 @@
+import { useContext } from "react"
+import { SettingContext } from "../global/useContext"
+
 export const Skills = () => {
+    const {language} = useContext(SettingContext)
     const skills = [
         {
             titel: "Styling",
@@ -55,10 +59,12 @@ export const Skills = () => {
             <div className="tecStack" >Technical Skills</div>
             <div className="cardContainer">
                 <p className="introduce">
-                    All values ​​given here are only a guideline and correspond to my personal assessment.<br />
-
-                    The values ​​given here show how confident I feel in my previous tasks with the respective techniques.<br />
-                    fine > 90% - good > 80% - okay > 60% - basics > 20%
+                    {language ? ("All values ​​given here are only a guideline and correspond to my personal assessment.")
+                    : ("Alle hier angegebenen Werte sind nur ein Richtwert und entsprechen meiner persönlichen Einschätzung.")}
+                    <br /> 
+                    {language ? ("The values ​​given here show how confident I feel in my previous tasks with the respective techniques.") : ("Die hier angegebenen Werte zeigen, wie sicher ich mich bei meinen bisherigen Aufgaben mit den jeweiligen Techniken fühle.")}
+                    <br />
+                    fine > 90% - good > 80% - okay > 60% - basics > 20%"
                 </p>
                 { skills.map((skill, i) => (
                 <div className="card" key={i}>
@@ -82,6 +88,7 @@ export const Skills = () => {
                 </div>
                 ))}
             </div>
+            <div className="spacer"></div>
         </section>
         
     )

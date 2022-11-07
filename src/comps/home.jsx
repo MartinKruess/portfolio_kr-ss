@@ -19,6 +19,7 @@ glowInTexts.forEach(glowInText => {
               <h1 className="header">Portfolio</h1>
               <h2 className="header co">Martin Krüss</h2>
               </div>
+              <div className="spacer"></div>
         </section>
     )
 }

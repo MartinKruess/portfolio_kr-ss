@@ -1,8 +1,28 @@
+import { useContext } from "react"
+import { SettingContext } from "../global/useContext"
 import cv from "/pdf/CV_Krüss.pdf"
 import cerfiticate from "/pdf/Zertifikat_Krüss.pdf"
 import zeugnis from "/pdf/Zeugnis_Tutor_Krüss.pdf"
 
+const funx = () => {
+    const heute = new Date()
+    const bday = new Date(1982, 10, 10)
+    console.log(bday)
+    const rawAge = heute - bday
+    const age = Math.floor(rawAge/31536000000)
+    
+    return alert(age);
+}
+
 export const About = () => {
+    const { language } = useContext(SettingContext)
+
+    const heute = new Date()
+    const bday = new Date(1990, 2, 1)
+    console.log(bday)
+    const rawAge = heute - bday
+    const age = Math.floor(rawAge/31536000000)
+
     return(
         <section id="about">
             <article className="aboutLeft">
@@ -30,15 +50,15 @@ export const About = () => {
             <article className="aboutRight">
                 <div className="imgContainer"><img src="/images/preview.png" alt="" /></div>
                 <p className="contextRight">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, quae illo temporibus labore maiores autem veritatis. Ipsam minima eos saepe temporibus facere sapiente quam debitis voluptatem, qui, corporis quod! Architecto illo provident aut sequi, quos, nihil, quod excepturi voluptatibus vero voluptates neque nam dolorum? Eos voluptates asperiores corporis dolore molestias, rerum minima sed voluptatibus odio porro odit, obcaecati ut illo aliquid repellendus reprehenderit id laborum accusantium nisi esse nostrum, in eius?
+                    {language ? ("Hi, my name is Martin Krüss, but you can just call me Martin. I am {age} years old and used the Corona crisis to further educate myself as a full stack web and software developer.") : ("Hi ich heiße Martin Krüss, aber Sie können mich einfach Martin nennen. Ich bin {age} Jahre alt und habe die Corona Kriese genutzt um mich zum Fullstack Web- und Software Developer weiter zu bilden.")}
+                    <br /><br />
+                    {language ? ("In the last year, I have preferred to deal with the MERN stack and have implemented a number of smaller and larger projects with it.") : ("Im letzten Jahr habe ich mich bevorzugt mit dem MERN-Stack auseinader gesetzt und einige kleiner und größere projekte damit verwirklicht.")}
                 </p>
                 <p>
-                 Illum, numquam! Cum dolores deleniti, quos saepe reprehenderit accusamus vel repellat? Dicta odio eaque voluptate, nihil quaerat molestiae cupiditate iusto, quae maxime beatae dolore aliquam repellat, ea aliquid similique voluptatem. Praesentium voluptatibus illum voluptas maxime et optio inventore exercitationem blanditiis obcaecati labore, recusandae aliquid cupiditate, officiis molestias nemo odit totam error?
+                {language ? ("I strive to create elegant solutions that surprise and delight users while keeping complex technical dependencies in mind for implementation, scalability and developer sanity.") : ("Ich bemühe mich, elegante Lösungen zu schaffen, die Benutzer überraschen und begeistern, während ich komplexe technische Abhängigkeiten für Implementierung, Skalierbarkeit und Entwicklervernunft im Auge behalte.")}
+                <br /><br />
+                {language ? ("In addition to my studies, I was hired as a tutor for two classes at my university. As a tutor, I became the first point of contact for students who had understanding and/or code issues.") : ("Neben dem Studium war ich als Tutor für zwei Klassen an meiner Uni eingestellt. Als Tutor wurde ich zum ersten Ansprechpartner für Studenten, die Verständnis- und/oder Codeprobleme hatten.")}
                 </p>
-            </article>
-            <div className="spacer"></div>
-            <article>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam deserunt expedita ratione soluta eaque labore, rerum sit accusamus laudantium enim eius consectetur ab facere fugit aspernatur repellat voluptates, itaque doloremque, explicabo fuga officiis quasi. Fuga, quasi ex! Accusamus voluptatibus quos suscipit delectus nulla consequatur facilis aut harum totam dicta repudiandae veritatis ex vitae sed explicabo a doloribus, aperiam, vel iste. Sequi iure dolorem fugit earum in, aliquam incidunt ad ratione quibusdam voluptatibus cupiditate amet maxime placeat asperiores et eligendi sunt rerum nesciunt recusandae consectetur voluptate unde qui omnis. Eos earum temporibus inventore obcaecati nemo nisi quis soluta esse hic itaque.
             </article>
             <div className="spacer"></div>
         </section>
