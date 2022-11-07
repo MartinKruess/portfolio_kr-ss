@@ -64,7 +64,7 @@ export const Skills = () => {
                     <br /> 
                     {language ? ("The values ​​given here show how confident I feel in my previous tasks with the respective techniques.") : ("Die hier angegebenen Werte zeigen, wie sicher ich mich bei meinen bisherigen Aufgaben mit den jeweiligen Techniken fühle.")}
                     <br />
-                    fine > 90% - good > 80% - okay > 60% - basics > 20%
+                    {language ? ("fine > 90% - good > 80% - okay > 60% - basics > 20%"):("sehr gut > 90% - gut > 80% - ok > 60% - Grundkenntnisse > 20%")}
                 </p>
                 { skills.map((skill, i) => (
                 <div className="card" key={i}>
