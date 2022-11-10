@@ -1,6 +1,11 @@
+@font-face{
+  font-family: 'Teko';
+  src: url('/public/fonts/Teko-Regular.ttf');
+}
+
 :root{
   font-size: 62.5%;
-  --primary: #242628;
+  --primary: #121215;
   --primaryBG: #34363899;
   --Secondary: #ededed;
   --smallSpacer: 0.5rem;
@@ -18,18 +23,48 @@ body{
   background-color: var(--primary);
   color: var(--Secondary);
   font-family: 'Teko', sans-serif;
-  font-size: 1.6rem;
-  src: url(/public/fonts/Teko-Regular.ttf);
+  font-size: 1.8rem;
+  src: url('/public/fonts/Teko-Regular.ttf');
 
   section{
     width: 80%;
     margin: var(--smallSpacer) auto;
-    padding: var(--largeSpacer) var(--smallSpacer);
+    padding: var(--largeSpacer) 0 var(--largeSpacer) 0rem;
   
     article{
       display: flex;
       flex-wrap: wrap;
-      padding: var(--mediumSpacer);
+      padding: var(--smallSpacer);
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  body{
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  body{
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  body{
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  body{
+    font-size: 1.2rem;
+
+    section{
+      margin: 0 0;
+      margin-left: 10rem;
+      padding-right: 0;
     }
   }
 }
@@ -175,15 +210,13 @@ body{
 }
 
 // Home
+.headerContainer{
+  -webkit-text-stroke: 2px #660000;
+}
+
 .header{
   background-image: url(https://media.giphy.com/media/5k00E7cigvvqnBYDdP/giphy.gif);
   //url(https://media.giphy.com/media/eJoZAwRN9OI5QjthIE/giphy.gif);
-  // url(https://media.giphy.com/media/3Fox4sRv6aRS9bCggt/giphy-downsized-large.gif);
-  // url(https://media.giphy.com/media/7FrOU9tPbgAZtxV5mb/giphy-downsized-large.gif);
-  // url(https://media.giphy.com/media/ko7twHhomhk8E/giphy.gif);
-  // url(https://media.giphy.com/media/1lvotGQwhzi6O0gQtV/giphy.gif);
-  // url(https://media.giphy.com/media/XybVuGlf0VKDTrBo05/giphy-downsized-large.gif);
-  // url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
   background-size: cover;
   color: transparent;
   -moz-background-clip: text;
@@ -204,15 +237,13 @@ body{
   flex-wrap: wrap;
 
   .aboutLeft{
-    width: 48%;
-    border-right: solid 1px;
+    width: 40%;
   
     ul{
       margin-left: var(--mediumSpacer);
   
       li{
-        font-size: 1.9rem;
-        line-height: 4.5rem;
+        line-height: 3.5rem;
         list-style: none;
   
         a{
@@ -224,25 +255,118 @@ body{
   }
   
   .aboutRight{
-    width: 48%;
+    width: 55%;
     display: flex;
     flex-direction: row;
-    //flex-wrap: wrap;
+    flex-wrap: wrap;
 
-    .imgContainer{
-      width: 20rem;
-      border: solid;
-
-      img{
-        width: 100%;
-      }
-    }
 
     .contextRight{
-      width: 60%;
+      width: 70rem;
+      display: flex;
+      flex-wrap: wrap;
       margin-left: var(--largeSpacer);
+      padding: var(--smallSpacer);
+
+      .contextRightText{
+        width: 61%;
+        clip-path: polygon(0% 0%, 100% 0%, 70% 100%, 0% 100%);
+
+        .textContainer1{
+          width: 98%;
+          padding: var(--smallSpacer);
+        }
+        .textContainer2{
+          width: 90%;
+          padding: var(--smallSpacer);
+        }
+        .textContainer3{
+          width: 80%;
+          padding: var(--smallSpacer);
+        }
+        .textContainer4{
+          width: 70%;
+          padding: var(--smallSpacer);
+        }
+      }
+
+      
+
+      .imgContainer{
+        width: 40%;
+        clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 30% 0%);
+        margin-left: -8rem;
+  
+        img{
+          width: 100%;
+        }
+      }
     }
   }
+}
+
+@media only screen and (max-width: 1424px) {
+  #about{
+    flex-direction: column;
+
+    .aboutLeft, .aboutRight{
+      width: 100vw;
+      border: none;
+    }
+
+    .aboutRight{
+      margin-top: 8rem;
+
+      .imgContainer{
+        width: 20%;
+      }
+
+      .contextRight{
+        width: 79%;
+        margin-left: var(--smallSpacer);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  body{
+    section{
+      width: 75vh;
+      margin-left: 12vh;
+      border: solid;
+    }
+  }
+
+  #about{
+
+    .aboutRight{
+      width: 100%;
+      border: solid;
+  
+      .contextRightText{
+        width: 100% !important;
+    
+        .textContainer1, .textContainer2, .textContainer3, .textContainer4{
+          width: 80% !important;
+        }
+      }
+    
+      .imgContainer{
+        width: 40% !important;
+        margin-left: 0rem !important;
+        border: solid;
+    
+        img{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
 }
 
 // Skills
@@ -363,6 +487,7 @@ body{
   flex-wrap: wrap;
   text-align: center;
   justify-content: space-evenly;
+  
 
   h3{
     font-size: 4rem;
@@ -378,6 +503,7 @@ body{
 
     .projectContainer{
       width: 40rem;
+      height: 30rem;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;

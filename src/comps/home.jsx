@@ -1,25 +1,30 @@
+import { useContext } from "react";
+import { SettingContext } from "../global/useContext";
+
 export const Home = () => {
+  const { language } = useContext(SettingContext)
 
-let glowInTexts = document.querySelectorAll(".glowIn");
-glowInTexts.forEach(glowInText => {
-  let letters = glowInText.textContent.split("");
-  glowInText.textContent = "";
-  letters.forEach((letter, i) => {
-    let span = document.createElement("span");
-    span.textContent = letter;
-    span.style.animationDelay = `${i * 0.05}s`;
-    glowInText.append(span);
+  let glowInTexts = document.querySelectorAll(".glowIn");
+  glowInTexts.forEach(glowInText => {
+    let letters = glowInText.textContent.split("");
+    glowInText.textContent = "";
+    letters.forEach((letter, i) => {
+      let span = document.createElement("span");
+      span.textContent = letter;
+      span.style.animationDelay = `${i * 0.05}s`;
+      glowInText.append(span);
+    });
   });
-});
-
 
     return(
         <section id="home">
-            <div >
-              <h1 className="header">Portfolio</h1>
-              <h2 className="header co">Martin Krüss</h2>
-              </div>
-              <div className="spacer"></div>
+            <div className="headerContainer">
+              <h1 className="header">Martin Krüss</h1>
+              <h2 className="header co">
+                {language ? ('Fullstack Developer') : ('Fullstack Entwickler')}
+              </h2>
+            </div>
+            <div className="spacer"></div>
         </section>
     )
 }

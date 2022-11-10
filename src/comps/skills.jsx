@@ -56,15 +56,14 @@ export const Skills = () => {
 
     return(
         <section id="skills">
-            <div className="tecStack" >Technical Skills</div>
+            <div className="tecStack" >
+                {language ? ("Technical Skills") : ("Technische Fähigkeiten")}
+            </div>
             <div className="cardContainer">
                 <p className="introduce">
-                    {language ? ("All values ​​given here are only a guideline and correspond to my personal assessment.")
-                    : ("Alle hier angegebenen Werte sind nur ein Richtwert und entsprechen meiner persönlichen Einschätzung.")}
-                    <br /> 
                     {language ? ("The values ​​given here show how confident I feel in my previous tasks with the respective techniques.") : ("Die hier angegebenen Werte zeigen, wie sicher ich mich bei meinen bisherigen Aufgaben mit den jeweiligen Techniken fühle.")}
                     <br />
-                    {language ? ("fine > 90% - good > 80% - okay > 60% - basics > 20%"):("sehr gut > 90% - gut > 80% - ok > 60% - Grundkenntnisse > 20%")}
+                    {language ? ("fine > 90% - good > 80% - okay > 60% - basics < 20%"):("sehr gut > 90% - gut > 80% - ok > 60% - Grundkenntnisse > 20%")}
                 </p>
                 { skills.map((skill, i) => (
                 <div className="card" key={i}>
