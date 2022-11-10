@@ -247,7 +247,7 @@ body{
         list-style: none;
   
         a{
-          color: #ededed99;
+          color: #ff000099;
           text-decoration: none;
         }
       }
@@ -269,23 +269,9 @@ body{
       padding: var(--smallSpacer);
 
       .contextRightText{
-        width: 61%;
-        clip-path: polygon(0% 0%, 100% 0%, 70% 100%, 0% 100%);
+        width: 100%;
 
-        .textContainer1{
-          width: 98%;
-          padding: var(--smallSpacer);
-        }
-        .textContainer2{
-          width: 90%;
-          padding: var(--smallSpacer);
-        }
-        .textContainer3{
-          width: 80%;
-          padding: var(--smallSpacer);
-        }
-        .textContainer4{
-          width: 70%;
+        p{
           padding: var(--smallSpacer);
         }
       }

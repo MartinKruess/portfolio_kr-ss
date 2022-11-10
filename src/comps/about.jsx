@@ -56,20 +56,20 @@ export const About = () => {
             <article className='aboutRight'>
                 <div className='contextRight'>
                     <div className='contextRightText'>
-                        <p className='textContainer1'>
+                        <p>
                             {language ? (`
                             Hi, my name is Martin Krüss, but you can just call me Martin. I'm ${age} years old and have always been involved in various aspects of application development in my private life.`) : (`Hi ich heiße Martin Krüss, aber Sie können mich einfach Martin nennen. Ich bin ${age} Jahre alt und habe mich privat schon immer mit verschiedenen Aspekten der Anwendungsentwicklung beschäftigt.`)}
                         </p>
-                        <p className='textContainer1'>
+                        <p>
                             {language ? ('Due to the Corona crisis, I finally had the time to deal with the topic of web development professionally, so I used this time to further educate myself as a full-stack web and software developer.') : ('Durch die Corona Kriese hatte ich nun endlich die Zeit mich professionell mit dem Thema Web Development zu beschäftigen, so habe ich diese Zeit genutzt um mich zum Fullstack Web- und Software Developer weiter zu bilden.')}
                         </p>
-                        <p className='textContainer2'>
+                        <p>
                             {language ? ('In the last year, I have preferred to deal with the MERN stack and have implemented a number of smaller and larger projects with it.') : ('Im letzten Jahr habe ich mich bevorzugt mit dem MERN-Stack auseinader gesetzt und einige kleiner und größere projekte damit verwirklicht.')}
                         </p>
-                        <p className='textContainer3'>
+                        <p>
                             {language ? ('I strive to create elegant solutions that surprise and delight users while keeping complex technical dependencies in mind for implementation, scalability and developer sanity.') : ('Ich bemühe mich, elegante Lösungen zu schaffen, die Benutzer überraschen und begeistern, während ich komplexe technische Abhängigkeiten für Implementierung, Skalierbarkeit und Entwicklervernunft im Auge behalte')}
                         </p>
-                        <p className='textContainer4'>
+                        <p>
                             {language ? ('In addition to my studies, I was hired as a tutor for two classes at my university. As a tutor, I became the first point of contact for students who had understanding and/or code issues.') : ('Neben dem Studium war ich als Tutor für zwei Klassen an meiner Uni eingestellt. Als Tutor wurde ich zum ersten Ansprechpartner für Studenten, die Verständnis- und/oder Codeprobleme hatten.')}
                         </p>
                     </div>
