@@ -73,7 +73,9 @@ export const About = () => {
                             {language ? ('In addition to my studies, I was hired as a tutor for two classes at my university. As a tutor, I became the first point of contact for students who had understanding and/or code issues.') : ('Neben dem Studium war ich als Tutor für zwei Klassen an meiner Uni eingestellt. Als Tutor wurde ich zum ersten Ansprechpartner für Studenten, die Verständnis- und/oder Codeprobleme hatten.')}
                         </p>
                     </div>
-                    
+                    {/* <div className='imgContainer'>
+                        <img src='/images/martin_kruess.png' alt='image Martin Krüss' />
+                    </div> */}
                 </div>
             </article>
             <div className='spacer'></div>
