@@ -30,24 +30,24 @@ export const About = () => {
                     <li>Martin</li>
                     <li>Krüss</li>
                     <li>DCI-Digital Career Institute gGmbH</li>
-                    <li>Fullstack Webdeveloper <a href='https://www.mongodb.com/mern-stack' target='_blank' rel='noopener noreferrer'>(MERN)</a></li>
+                    <li>Fullstack Webdeveloper <a href='https://www.mongodb.com/mern-stack' target='_blank' rel='informationabout MERM-Stack'>(MERN)</a></li>
                     <li>
                         {language
                         ? ('Family and Friends, Darts, Billiards, Gaming')
                         : ('Familie und Freunde, Dart, Billard, GamingSchach')}
                     </li>
                     <li>
-                        <a href={cv} target='_blank' rel='noopener noreferrer'>
+                        <a href={cv} target='_blank' rel='download cv'>
                             {language ? ('CV download') : ('Lebenslauf herunterladen')}
                         </a>
                     </li>
                     <li>
-                        <a href={cerfiticate} target='_blank' rel='noopener noreferrer'>
+                        <a href={cerfiticate} target='_blank' rel='download certificate'>
                             {language ? ('DCI Certificate') : ('DCI Zertifikat')}
                         </a>
                     </li>
                     <li>
-                        <a href={zeugnis} target='_blank' rel='noopener noreferrer'>
+                        <a href={zeugnis} target='_blank' rel='download report'>
                             {language ? ('Report of Employment (Tutor)') : ('Arbeitszeugnis (Tutor)')}
                         </a>
                     </li>
@@ -62,19 +62,18 @@ export const About = () => {
                         </p>
                         <p className='textContainer1'>
                             {language ? ('Due to the Corona crisis, I finally had the time to deal with the topic of web development professionally, so I used this time to further educate myself as a full-stack web and software developer.') : ('Durch die Corona Kriese hatte ich nun endlich die Zeit mich professionell mit dem Thema Web Development zu beschäftigen, so habe ich diese Zeit genutzt um mich zum Fullstack Web- und Software Developer weiter zu bilden.')}
-                        
                         </p>
                         <p className='textContainer2'>
                             {language ? ('In the last year, I have preferred to deal with the MERN stack and have implemented a number of smaller and larger projects with it.') : ('Im letzten Jahr habe ich mich bevorzugt mit dem MERN-Stack auseinader gesetzt und einige kleiner und größere projekte damit verwirklicht.')}
                         </p>
                         <p className='textContainer3'>
-                            {language ? ('I strive to create elegant solutions that surprise and delight users while keeping complex technical dependencies in mind for implementation, scalability and developer sanity.') : ('Ich bemühe mich, elegante Lösungen zu schaffen, die Benutzer überraschen und begeistern, während ich komplexe technische Abhängigkeiten für Implementierung, Skalierbarkeit und Entwicklervernunft im Auge behalte.')}
+                            {language ? ('I strive to create elegant solutions that surprise and delight users while keeping complex technical dependencies in mind for implementation, scalability and developer sanity.') : ('Ich bemühe mich, elegante Lösungen zu schaffen, die Benutzer überraschen und begeistern, während ich komplexe technische Abhängigkeiten für Implementierung, Skalierbarkeit und Entwicklervernunft im Auge behalte')}
                         </p>
                         <p className='textContainer4'>
                             {language ? ('In addition to my studies, I was hired as a tutor for two classes at my university. As a tutor, I became the first point of contact for students who had understanding and/or code issues.') : ('Neben dem Studium war ich als Tutor für zwei Klassen an meiner Uni eingestellt. Als Tutor wurde ich zum ersten Ansprechpartner für Studenten, die Verständnis- und/oder Codeprobleme hatten.')}
                         </p>
                     </div>
-                    <div className='imgContainer'><img src='/images/ich22.png' alt='' /></div>
+                    
                 </div>
             </article>
             <div className='spacer'></div>
