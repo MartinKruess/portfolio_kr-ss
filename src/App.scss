@@ -316,23 +316,44 @@ body{
   }
 }
 
+@media only screen and (max-width: 1024px) {
+  .header{
+    font-size: 6rem;
+  }
+  .co{
+    font-size: 4rem;
+  }
+}
+
 @media only screen and (max-width: 900px) {
   body{
     section{
       width: 75vh;
-      margin-left: 12vh;
+      margin-left: 8vh;
     }
   }
 
+  .header{
+    font-size: 4rem;
+  }
+  .co{
+    font-size: 2.5rem;
+  }
+
   .spacer{
-    height: 10rem;
+    height: 5rem;
   }
 
   #about{
+    
+    .aboutLeft{
+      width: 100%;
+      margin: 0 10rem;
+    }
 
     .aboutRight{
       width: 100%;
-      border: solid;
+      margin: auto;
   
       .contextRightText{
         width: 100% !important;
@@ -345,7 +366,6 @@ body{
       .imgContainer{
         width: 40% !important;
         margin-left: 0rem !important;
-        border: solid;
     
         img{
           width: 100%;
