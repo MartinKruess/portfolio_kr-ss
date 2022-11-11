@@ -10,8 +10,11 @@ import { Skills } from "./skills"
 
 export const Navi = () => {
   const { language, setLanguage } = useContext(SettingContext)
-const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false)
 
+  const scrollToPage = (page) => {
+    window.scroll(0, page)
+  }
 
     return(
     <div className="naviContainer">
@@ -32,47 +35,54 @@ const [open, setOpen] = useState(false)
         </>}
         
         <div className="connection"></div>
-        <Link
+        <NavLink
             element={<Home />}
             to="home"
             className="topic"
+            onClick={() => scrollToPage(0)}
           >
             Home
-        </Link>
+        </NavLink>
         <div className="connection"></div>
-        <Link
+        <NavLink
             element={<About />}
             to="about"
+            activeClassName={"active"}
             className="topic"
+            onClick={() => scrollToPage(200)}
           >
             About
-        </Link>
+        </NavLink>
         <div className="connection"></div>
-        <Link
+        <NavLink
             element={<Skills />}
             to="skills"
+            activeClassName={"active"}
             className="topic"
+            onClick={() => scrollToPage(1200)}
           >
             Skills
-        </Link>
+        </NavLink>
         <div className="connection"></div>
-        <Link
+        <NavLink
             element={<Projects />}
             to="projects"
             className="topic"
+            onClick={() => scrollToPage(2400)}
           >
             Projects
-        </Link>
+        </NavLink>
         <div className="connection"></div>
-        <Link
+        <NavLink
             element={<Contact />}
             to="contact"
             className="topic"
             smooth={true}
             duration={500}
+            onClick={() => scrollToPage(10000)}
           >
             Contact
-        </Link>
+        </NavLink>
     </div>
     )
     
