@@ -238,7 +238,8 @@ body{
   flex-wrap: wrap;
 
   .aboutLeft{
-    width: 40%;
+    width: 42%;
+
   
     ul{
       margin-left: var(--mediumSpacer);
@@ -261,7 +262,6 @@ body{
     flex-direction: row;
     flex-wrap: wrap;
 
-
     .contextRight{
       width: 70rem;
       display: flex;
@@ -270,22 +270,20 @@ body{
       padding: var(--smallSpacer);
 
       .contextRightText{
-        width: 100%;
+        width: 60%;
 
         p{
           padding: var(--smallSpacer);
         }
       }
 
-      
-
       .imgContainer{
         width: 40%;
-        clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 30% 0%);
-        margin-left: -8rem;
   
         img{
           width: 100%;
+          -webkit-filter: grayscale(65%); /* Safari 6.0 - 9.0 */
+          filter: grayscale(65%);
         }
       }
     }
