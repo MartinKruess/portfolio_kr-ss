@@ -28,9 +28,9 @@ body{
   src: url('/public/fonts/Teko-Regular.ttf');
 
   section{
-    width: 80%;
+    width: 82%;
     margin: var(--smallSpacer) auto;
-    padding: var(--largeSpacer) 0 var(--largeSpacer) 0rem;
+    padding: var(--largeSpacer) 0 var(--largeSpacer) 1rem;
   
     article{
       display: flex;
@@ -40,39 +40,9 @@ body{
   }
 }
 
-@media only screen and (max-width: 1024px) {
-  body{
-    font-size: 1.5rem;
-  }
-}
-
-@media only screen and (max-width: 900px) {
-  body{
-    font-size: 1.4rem;
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  body{
-    font-size: 1.3rem;
-  }
-}
-
-@media only screen and (max-width: 700px) {
-  body{
-    font-size: 1.2rem;
-
-    section{
-      margin: 0 0;
-      margin-left: 10rem;
-      padding-right: 0;
-    }
-  }
-}
-
 .spacer{
   width: 100%;
-  height: 20rem;
+  height: 6rem;
 }
 
 .naviContainer{
@@ -227,6 +197,7 @@ body{
   text-align: center;
   margin: 10px 0;
 }
+
 .co{
   font-size: 6rem;
 }
@@ -238,8 +209,8 @@ body{
   flex-wrap: wrap;
 
   .aboutLeft{
-    width: 42%;
-
+    width: 50%;
+    min-width: 55rem;
   
     ul{
       margin-left: var(--mediumSpacer);
@@ -257,124 +228,40 @@ body{
   }
   
   .aboutRight{
-    width: 55%;
+    width: 45%;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    justify-content: flex-end;
 
-    .contextRight{
-      width: 70rem;
-      display: flex;
-      flex-wrap: wrap;
-      margin-left: var(--largeSpacer);
-      padding: var(--smallSpacer);
+    .imgContainer{
+      background-color: #cccccc22;
+      width: 30rem;
+      height: 30rem;
+      overflow: hidden;
+      padding: var(--mediumSpacer);
+      border: groove 0.4em rgb(182, 179, 168);
+      border-radius: 1rem;
 
-      .contextRightText{
-        width: 60%;
-
-        p{
-          padding: var(--smallSpacer);
-        }
-      }
-
-      .imgContainer{
-        width: 40%;
-  
-        img{
-          width: 100%;
-          -webkit-filter: grayscale(75%); /* Safari 6.0 - 9.0 */
-          filter: grayscale(75%);
-        }
+      img{
+        width: 100%;
+        -webkit-filter: grayscale(75%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(75%);
+        border-radius: 0.5rem;
       }
     }
   }
-}
 
-@media only screen and (max-width: 1424px) {
-  #about{
-    flex-direction: column;
+  .aboutTextContainer{
+    width: 100%;
+    padding-top: 3rem;
 
-    .aboutLeft, .aboutRight{
-      width: 100vw;
-      border: none;
-    }
-
-    .aboutRight{
-      margin-top: 8rem;
-
-      .imgContainer{
-        width: 20%;
-      }
-
-      .contextRight{
-        width: 79%;
-        margin-left: var(--smallSpacer);
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  .header{
-    font-size: 6rem;
-  }
-  .co{
-    font-size: 4rem;
-  }
-}
-
-@media only screen and (max-width: 900px) {
-  body{
-    section{
-      width: 75vh;
-      margin-left: 8vh;
-    }
-  }
-
-  .header{
-    font-size: 4rem;
-  }
-  .co{
-    font-size: 2.5rem;
-  }
-
-  .spacer{
-    height: 5rem;
-  }
-
-  #about{
-    
-    .aboutLeft{
+    .contextText{
       width: 100%;
-      margin: 0 10rem;
-    }
 
-    .aboutRight{
-      width: 100%;
-      margin: auto;
-  
-      .contextRightText{
-        width: 100% !important;
-    
-        .textContainer1, .textContainer2, .textContainer3, .textContainer4{
-          width: 80% !important;
-        }
-      }
-    
-      .imgContainer{
-        width: 40% !important;
-        margin-left: 0rem !important;
-    
-        img{
-          width: 100%;
-        }
+      p{
+        padding: var(--smallSpacer);
       }
     }
   }
-}
-
-@media only screen and (max-width: 600px) {
-
 }
 
 // Skills
@@ -402,7 +289,7 @@ body{
     margin: var(--mediumSpacer);
     border: solid 1px #e33838;
     box-shadow:
-    1px 1px 1px 3px #d8222233,
+    1px 1px 3px 3px #d8222233,
     -1px -1px 1px 3px #d8222233,
     -1px 1px 1px 3px #d8222233,
     1px -1px 1px 3px #d8222233;
@@ -489,67 +376,197 @@ body{
   }
 }
 
-// Projects
-#projects{
-  display: flex;
-  flex-wrap: wrap;
-  text-align: center;
-  justify-content: space-evenly;
-  
+  // Projects
+  #projects{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-evenly;
+    
 
-  h3{
-    font-size: 4rem;
-    width: 100%;
-    margin: 2.5rem;
+    h3{
+      font-size: 4rem;
+      width: 100%;
+      margin: 2.5rem;
+    }
+
+    a{
+      color: var(--Secondary);
+      margin: 1.5rem;
+      padding: 0;
+      text-decoration: none;
+
+      .projectContainer{
+        width: 40rem;
+        height: 32rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: var(--mediumSpacer);
+        border: solid red;
+
+        .projectHeader{
+          width: 100%;
+          font-size: 2.4rem;
+          margin-bottom: var(--smallSpacer);
+        }
+
+        .preview{
+          width: 100%;
+
+          img{
+            width: 100%;
+            max-height: 19rem;
+          }
+        }
+
+        .projectDescription{
+          width: 100%;
+        }
+      }
+    }
   }
 
-  a{
-    color: var(--Secondary);
-    margin: 1.5rem;
-    padding: 0;
-    text-decoration: none;
 
-    .projectContainer{
-      width: 40rem;
-      height: 30rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      padding: var(--mediumSpacer);
-      border: solid red;
+  // Contact
+  .contact{
+    max-height: 8rem;
+    display: flex;
+    justify-content: flex-end;
 
-      .projectHeader{
-        width: 100%;
-        font-size: 2.4rem;
-        margin-bottom: var(--smallSpacer);
+    i{
+      color: var(--Secondary);
+      width: 5rem;
+      font-size: 3.3rem;
+    }
+  }
+
+
+  @media only screen and (max-width: 1424px) {
+    #about{
+  
+      .aboutLeft{
+        width: 100vw;
+        border: none;
+      }
+  
+      .aboutRight{
+        width: 28%;
       }
 
-      .preview{
-        width: 100%;
+      .aboutTextContainer{
+        width: 70%;
+      }
+    }
+  }
+  
+  @media only screen and (max-width: 992px) {
+    body {
+      font-size: 1.5rem;
 
-        img{
-          width: 100%;
-          max-height: 19rem;
+      section{
+        width: 85%;
+        margin: 0 0;
+        margin-left: 10rem;
+        margin-right: 0;
+      }
+    }
+
+    .header {
+      font-size: 6rem;
+    }
+
+    .co {
+      font-size: 4rem;
+    }
+
+    #about{
+      
+      .aboutRight{
+        width: 35%;
+        
+        .imgContainer{
+          height: 50%;
+
+          img{
+            scale: 1.2;
+            translate: (0 3.5rem);
+          }
         }
       }
 
-      .projectDescription{
+      .aboutTextContainer{
+        width: 65%;
+      }
+    }
+    
+    #about .aboutTextContainer {
+      // width: 100%;
+      padding-top: 0rem;
+    }
+
+    
+  }
+  
+  @media only screen and (max-width: 768px) {
+    body{
+      section{
+        width: 80%;
+        margin-left: 10rem;
+        margin-right: 0;
+      }
+    }
+  
+    .header{
+      font-size: 4rem;
+    }
+  
+    .co{
+      font-size: 2.5rem;
+    }
+  
+    .spacer{
+      height: 2rem;
+    }
+  
+    #about{
+      .aboutLeft{
+        width: 100%;
+        margin: 0 10rem;
+      }
+  
+      .aboutRight{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        .imgContainer{
+          width: 40%;
+          min-width: 25rem;
+          height: 25rem;
+
+          img{
+            scale: 1;
+            translate: (0 0);
+          }
+        }
+      }
+
+      .aboutTextContainer{
         width: 100%;
       }
     }
   }
-}
-
-
-// Contact
-.contact{
-  max-height: 8rem;
-  display: flex;
-  justify-content: flex-end;
-
-  i{
-    color: var(--Secondary);
-    width: 5rem;
-    font-size: 3.3rem;
+  
+  @media only screen and (max-width: 600px) {
+    body{
+      font-size: 1.2rem;
+  
+      section{
+        margin: 0 0;
+        margin-left: 10rem;
+        padding-right: 0;
+      }
+    }
   }
-}

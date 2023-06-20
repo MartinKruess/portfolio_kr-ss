@@ -1,56 +1,71 @@
 import { useContext } from "react"
 import { SettingContext } from "../global/useContext"
 
+
+
 export const Skills = () => {
     const {language} = useContext(SettingContext)
+
+    // Legend:
+    const fine = 90
+    const good = 75
+    const okay = 50
+    const basic = 20
+
     const skills = [
         {
             titel: "Styling",
             keys: ["CSS", "SCSS", "Tailwind", "Bootstrap", "responsive"],
-            values: ["fine", "good", "good", "basics", "okay"],
-            percent: 60,
+            values: ["fine", "fine", "good", "good", "good"],
+            percent: Math.floor((fine + fine + good + good + good)/5),
         },
         {
             titel: "Javascript",
             keys: ["JS-Dom", "Animations", "Singlepage App.", "heighOrderFunctions"],
-            values: ["good", "good", "okay", "okay"],
-            percent: 68,
+            values: ["fine", "okay", "okay", "fine"],
+            percent: Math.floor((fine + okay + okay + fine)/4),
         },
         {
             titel: "React",
             keys: ["react-router-dom", "useState", "useContext", "JSX", "libaries"],
-            values: ["fine", "fine", "good", "good", "okay"],
-            percent: 84,
+            values: ["fine", "fine", "fine", "fine", "okay"],
+            percent: Math.floor((fine + fine + fine + fine + okay)/5),
         },
         {
             titel: "Security",
-            keys: ["bcrypt", "jwt", "oAuth", "user Managment", "testing"],
-            values: ["fine", "good", "okay", "good", "basics"],
-            percent: 68,
+            keys: ["bcrypt", "jwt", "oAuth", "user roles", "testing"],
+            values: ["fine", "good", "okay", "good", "basic"],
+            percent: Math.floor((fine + good + okay + good + basic)/5),
         },
         {
             titel: "Node",
             keys: ["Express", "Cors", "API"],
-            values: ["good", "basics", "good"],
-            percent: 85,
+            values: ["good", "basic", "good"],
+            percent: Math.floor((good + basic + good)/3),
         },
         {
             titel: "MongoDB",
             keys: ["mongoose", "Atlas","data-management", "Schemas & SubSchemas"],
-            values: ["good","good","okay", "good"],
-            percent: 75,
+            values: ["good","good","good", "good"],
+            percent: Math.floor((good + good + good + good)/4),
         },
         {
             titel: "Socket IO",
-            keys: ["many to one (Support)", "Twitch LiveChat", "user Management"],
-            values: ["okay", "good", "okay"],
-            percent: 66,
+            keys: ["many2one", "many2many", "Twitch LiveChat", "user Management"],
+            values: ["okay", "good", "good", "okay"],
+            percent: Math.floor((okay + okay + good + okay)/4),
+        },
+        {
+            titel: "oAuth/oAuth2",
+            keys: ["Login with Twitch", "Login with Github", "Login with Google", "Passport"],
+            values: ["good", "good", "okay", "okay"],
+            percent: Math.floor((good + good + okay + okay)/4),
         },
         {
             titel: "Extras",
-            keys: ["Login with Twitch", "Passport", "Login with Github", "Paypal", "Filesystem", "Cloudinary", "netlify", "cyclic sh"],
-            values: ["okay", "okay", "okay", "okay", "good", "okay", "good", "good"],
-            percent: 67.5,
+            keys: ["Paypal", "Filesystem", "Cloudinary", "netlify", "cyclic sh"],
+            values: ["okay", "good", "okay", "good", "good"],
+            percent: Math.floor((okay + good +okay + good +good)/5),
         },
     ]
 
