@@ -40,36 +40,6 @@ body{
   }
 }
 
-@media only screen and (max-width: 1024px) {
-  body{
-    font-size: 1.5rem;
-  }
-}
-
-@media only screen and (max-width: 900px) {
-  body{
-    font-size: 1.4rem;
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  body{
-    font-size: 1.3rem;
-  }
-}
-
-@media only screen and (max-width: 700px) {
-  body{
-    font-size: 1.2rem;
-
-    section{
-      margin: 0 0;
-      margin-left: 10rem;
-      padding-right: 0;
-    }
-  }
-}
-
 .spacer{
   width: 100%;
   height: 20rem;
@@ -234,13 +204,12 @@ body{
 // About
 
 #about{
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 
   .aboutLeft{
-    width: 42%;
+    grid-column: 1/2;
 
-  
     ul{
       margin-left: var(--mediumSpacer);
   
@@ -257,78 +226,75 @@ body{
   }
   
   .aboutRight{
-    width: 55%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 
-    .contextRight{
-      width: 70rem;
-      display: flex;
-      flex-wrap: wrap;
-      margin-left: var(--largeSpacer);
-      padding: var(--smallSpacer);
+    .contextRightText{
+      grid-column: 1/3;
 
-      .contextRightText{
-        width: 60%;
-
-        p{
-          padding: var(--smallSpacer);
-        }
+      p{
+        padding: var(--smallSpacer);
       }
+    }
 
-      .imgContainer{
-        width: 40%;
-  
-        img{
-          width: 100%;
-          -webkit-filter: grayscale(75%); /* Safari 6.0 - 9.0 */
-          filter: grayscale(75%);
-        }
+    .imgContainer{
+      grid-column: 3/4;
+      max-height: 50rem;
+      overflow: hidden;
+      border: solid red ;
+
+      img{
+        width: 100%;
+        -webkit-filter: grayscale(75%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(75%);
+        transform: translateY(-7rem);
+        border: solid;
       }
     }
   }
 }
 
 @media only screen and (max-width: 1424px) {
+  body{
+    font-size: 1.4rem;
+  }
+
   #about{
-    flex-direction: column;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 2fr;
 
     .aboutLeft, .aboutRight{
-      width: 100vw;
-      border: none;
+      grid-column: 1/2;
     }
 
-    .aboutRight{
-      margin-top: 8rem;
-
+      .contextRightText{
+        grid-column: 1/2;
+      }
       .imgContainer{
-        width: 20%;
+        grid-column: 3/4;
+        max-height: 40rem;
       }
-
-      .contextRight{
-        width: 79%;
-        margin-left: var(--smallSpacer);
-      }
-    }
   }
 }
 
 @media only screen and (max-width: 1024px) {
-  .header{
-    font-size: 6rem;
+  body{
+    font-size: 1.3rem;
   }
+
+  .header{
+    font-size: 5rem;
+  }
+
   .co{
-    font-size: 4rem;
+    font-size: 3rem;
   }
 }
 
 @media only screen and (max-width: 900px) {
   body{
-    section{
-      width: 75vh;
-      margin-left: 8vh;
-    }
+    font-size: 1.2rem;
   }
 
   .header{
@@ -343,30 +309,27 @@ body{
   }
 
   #about{
+    margin-left: 12rem;
     
     .aboutLeft{
       width: 100%;
-      margin: 0 10rem;
+    }
+  
+    .contextRightText{
+      width: 100% !important;
+  
+      .textContainer1, .textContainer2, .textContainer3, .textContainer4{
+        width: 80% !important;
+      }
     }
 
     .aboutRight{
-      width: 100%;
-      margin: auto;
-  
-      .contextRightText{
-        width: 100% !important;
-    
-        .textContainer1, .textContainer2, .textContainer3, .textContainer4{
-          width: 80% !important;
-        }
-      }
-    
       .imgContainer{
-        width: 40% !important;
-        margin-left: 0rem !important;
+        width: 100%;
     
         img{
           width: 100%;
+          transform: translateY(-3rem);
         }
       }
     }
@@ -374,7 +337,23 @@ body{
 }
 
 @media only screen and (max-width: 600px) {
+  body{
+    font-size: 1rem;
+  }
 
+  #about{
+    margin-left: 10rem;
+
+    .aboutRight{
+      .contextRightText{
+        grid-column: 1/4;
+      }
+  
+      .imgContainer{
+        display: none;
+      }
+    }
+  }
 }
 
 // Skills

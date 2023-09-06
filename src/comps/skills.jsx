@@ -7,32 +7,32 @@ export const Skills = () => {
         {
             titel: "Styling",
             keys: ["CSS", "SCSS", "Tailwind", "Bootstrap", "responsive"],
-            values: ["fine", "good", "good", "basics", "okay"],
-            percent: 60,
+            values: ["fine", "good", "good", "okay", "okay"],
+            percent: 68,
         },
         {
             titel: "Javascript",
             keys: ["JS-Dom", "Animations", "Singlepage App.", "heighOrderFunctions"],
-            values: ["good", "good", "okay", "okay"],
-            percent: 68,
+            values: ["good", "good", "okay", "good"],
+            percent: 70,
         },
         {
             titel: "React",
             keys: ["react-router-dom", "useState", "useContext", "JSX", "libaries"],
-            values: ["fine", "fine", "good", "good", "okay"],
+            values: ["fine", "fine", "good", "fine", "okay"],
             percent: 84,
         },
         {
             titel: "Security",
             keys: ["bcrypt", "jwt", "oAuth", "user Managment", "testing"],
             values: ["fine", "good", "okay", "good", "basics"],
-            percent: 68,
+            percent: 64,
         },
         {
             titel: "Node",
             keys: ["Express", "Cors", "API"],
             values: ["good", "basics", "good"],
-            percent: 85,
+            percent: 64,
         },
         {
             titel: "MongoDB",
@@ -49,8 +49,8 @@ export const Skills = () => {
         {
             titel: "Extras",
             keys: ["Login with Twitch", "Passport", "Login with Github", "Paypal", "Filesystem", "Cloudinary", "netlify", "cyclic sh"],
-            values: ["okay", "okay", "okay", "okay", "good", "okay", "good", "good"],
-            percent: 67.5,
+            values: ["okay", "okay", "okay", "good", "good", "okay", "good", "good"],
+            percent: 60,
         },
     ]
 
