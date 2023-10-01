@@ -14,7 +14,6 @@ export const SideSetting = ({ children }) => {
     //SAVE Token to LocalStorage
     language && localStorage.setItem('lang', JSON.stringify(language))
   }, [language])
-  console.log('lang', language)
 
   return (
     <SettingContext.Provider value={{ language, setLanguage}}>

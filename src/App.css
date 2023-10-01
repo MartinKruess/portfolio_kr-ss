@@ -27,15 +27,9 @@ body {
   src: url("/public/fonts/Teko-Regular.ttf");
 }
 body section {
-<<<<<<< HEAD
-  width: 80%;
-  margin: var(--smallSpacer) auto;
-  padding: var(--largeSpacer) 0 var(--largeSpacer) 0rem;
-=======
   width: 82%;
   margin: var(--smallSpacer) auto;
-  padding: var(--largeSpacer) 0 var(--largeSpacer) 1rem;
->>>>>>> 91a56c64ace838c32b499e3b8ba044a4eac64567
+  padding: var(--largeSpacer) 1rem;
 }
 body section article {
   display: flex;
@@ -43,40 +37,9 @@ body section article {
   padding: var(--smallSpacer);
 }
 
-<<<<<<< HEAD
-@media only screen and (max-width: 1024px) {
-  body {
-    font-size: 1.5rem;
-  }
-}
-@media only screen and (max-width: 900px) {
-  body {
-    font-size: 1.4rem;
-  }
-}
-@media only screen and (max-width: 800px) {
-  body {
-    font-size: 1.3rem;
-  }
-}
-@media only screen and (max-width: 700px) {
-  body {
-    font-size: 1.2rem;
-  }
-  body section {
-    margin: 0 0;
-    margin-left: 10rem;
-    padding-right: 0;
-  }
-}
-.spacer {
-  width: 100%;
-  height: 20rem;
-=======
 .spacer {
   width: 100%;
   height: 6rem;
->>>>>>> 91a56c64ace838c32b499e3b8ba044a4eac64567
 }
 
 .naviContainer {
@@ -213,16 +176,11 @@ body section article {
 }
 
 #about {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 #about .aboutLeft {
-<<<<<<< HEAD
-  width: 42%;
-=======
-  width: 50%;
-  min-width: 55rem;
->>>>>>> 91a56c64ace838c32b499e3b8ba044a4eac64567
+  grid-column: 1/3;
 }
 #about .aboutLeft ul {
   margin-left: var(--mediumSpacer);
@@ -236,127 +194,32 @@ body section article {
   text-decoration: none;
 }
 #about .aboutRight {
-<<<<<<< HEAD
-  width: 55%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  grid-column: 1/3;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem;
 }
-#about .aboutRight .contextRight {
-  width: 70rem;
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: var(--largeSpacer);
+#about .aboutRight .contextRightText {
+  grid-column: 1/3;
+}
+#about .aboutRight .contextRightText p {
   padding: var(--smallSpacer);
-}
-#about .aboutRight .contextRight .contextRightText {
-  width: 60%;
-}
-#about .aboutRight .contextRight .contextRightText p {
-  padding: var(--smallSpacer);
-}
-#about .aboutRight .contextRight .imgContainer {
-  width: 40%;
-}
-#about .aboutRight .contextRight .imgContainer img {
-  width: 100%; /* Safari 6.0 - 9.0 */
-  filter: grayscale(75%);
-}
-
-@media only screen and (max-width: 1424px) {
-  #about {
-    flex-direction: column;
-  }
-  #about .aboutLeft, #about .aboutRight {
-    width: 100vw;
-    border: none;
-  }
-  #about .aboutRight {
-    margin-top: 8rem;
-  }
-  #about .aboutRight .imgContainer {
-    width: 20%;
-  }
-  #about .aboutRight .contextRight {
-    width: 79%;
-    margin-left: var(--smallSpacer);
-  }
-}
-@media only screen and (max-width: 1024px) {
-  .header {
-    font-size: 6rem;
-  }
-  .co {
-    font-size: 4rem;
-  }
-}
-@media only screen and (max-width: 900px) {
-  body section {
-    width: 75vh;
-    margin-left: 8vh;
-  }
-  .header {
-    font-size: 4rem;
-  }
-  .co {
-    font-size: 2.5rem;
-  }
-  .spacer {
-    height: 5rem;
-  }
-  #about .aboutLeft {
-    width: 100%;
-    margin: 0 10rem;
-  }
-  #about .aboutRight {
-    width: 100%;
-    margin: auto;
-  }
-  #about .aboutRight .contextRightText {
-    width: 100% !important;
-  }
-  #about .aboutRight .contextRightText .textContainer1, #about .aboutRight .contextRightText .textContainer2, #about .aboutRight .contextRightText .textContainer3, #about .aboutRight .contextRightText .textContainer4 {
-    width: 80% !important;
-  }
-  #about .aboutRight .imgContainer {
-    width: 40% !important;
-    margin-left: 0rem !important;
-  }
-  #about .aboutRight .imgContainer img {
-    width: 100%;
-  }
-}
-=======
-  width: 45%;
-  display: flex;
-  justify-content: flex-end;
 }
 #about .aboutRight .imgContainer {
-  background-color: rgba(204, 204, 204, 0.1333333333);
-  width: 30rem;
   height: 30rem;
+  width: 30rem;
+  max-height: 50rem;
   overflow: hidden;
-  padding: var(--mediumSpacer);
   border: groove 0.4em rgb(182, 179, 168);
-  border-radius: 1rem;
 }
 #about .aboutRight .imgContainer img {
-  width: 100%; /* Safari 6.0 - 9.0 */
+  width: 95%;
+  /* Safari 6.0 - 9.0 */
   filter: grayscale(75%);
-  border-radius: 0.5rem;
-}
-#about .aboutTextContainer {
-  width: 100%;
-  padding-top: 3rem;
-}
-#about .aboutTextContainer .contextText {
-  width: 100%;
-}
-#about .aboutTextContainer .contextText p {
-  padding: var(--smallSpacer);
+  padding-left: 5%;
+  transform: translateY(-10rem);
 }
 
->>>>>>> 91a56c64ace838c32b499e3b8ba044a4eac64567
 .cardContainer {
   width: 100%;
   display: flex;
@@ -376,13 +239,9 @@ body section article {
   flex-wrap: wrap;
   justify-content: center;
   padding: var(--mediumSpacer);
-  margin: var(--mediumSpacer);
+  margin: var(--largeSpacer);
   border: solid 1px #e33838;
-<<<<<<< HEAD
   box-shadow: 1px 1px 1px 3px rgba(216, 34, 34, 0.2), -1px -1px 1px 3px rgba(216, 34, 34, 0.2), -1px 1px 1px 3px rgba(216, 34, 34, 0.2), 1px -1px 1px 3px rgba(216, 34, 34, 0.2);
-=======
-  box-shadow: 1px 1px 3px 3px rgba(216, 34, 34, 0.2), -1px -1px 1px 3px rgba(216, 34, 34, 0.2), -1px 1px 1px 3px rgba(216, 34, 34, 0.2), 1px -1px 1px 3px rgba(216, 34, 34, 0.2);
->>>>>>> 91a56c64ace838c32b499e3b8ba044a4eac64567
 }
 .cardContainer .card h3 {
   width: 100%;
@@ -474,11 +333,7 @@ body section article {
 }
 #projects a .projectContainer {
   width: 40rem;
-<<<<<<< HEAD
   height: 30rem;
-=======
-  height: 32rem;
->>>>>>> 91a56c64ace838c32b499e3b8ba044a4eac64567
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -510,23 +365,155 @@ body section article {
   color: var(--Secondary);
   width: 5rem;
   font-size: 3.3rem;
-<<<<<<< HEAD
-=======
 }
 
 @media only screen and (max-width: 1424px) {
-  #about .aboutLeft {
-    width: 100vw;
-    border: none;
+  body {
+    font-size: 1.5rem;
   }
-  #about .aboutRight {
-    width: 28%;
+  #about {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 2fr;
   }
-  #about .aboutTextContainer {
-    width: 70%;
+  #about .aboutLeft, #about .aboutRight {
+    grid-column: 1/2;
+  }
+  #about .contextRightText {
+    grid-column: 1/2;
   }
 }
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1024px) {
+  body {
+    font-size: 1.4rem;
+  }
+  .header {
+    font-size: 5rem;
+  }
+  .co {
+    font-size: 3rem;
+  }
+  #about .aboutRight {
+    display: flex;
+    gap: 2rem;
+  }
+  #about .aboutRight .contextRightText {
+    width: 65%;
+    order: 2;
+  }
+  #about .aboutRight .imgContainer {
+    width: 20rem;
+    height: 20rem;
+    order: 1;
+  }
+  #about .aboutRight .imgContainer img {
+    transform: translateY(-7rem);
+  }
+}
+@media only screen and (max-width: 900px) {
+  body {
+    font-size: 1.5rem;
+  }
+  body section {
+    margin-left: 12rem;
+  }
+  .header {
+    font-size: 4rem;
+  }
+  .co {
+    font-size: 2.5rem;
+  }
+  .spacer {
+    height: 5rem;
+  }
+  #about .aboutLeft {
+    width: 100%;
+  }
+  #about .aboutRight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #about .aboutRight .contextRightText {
+    width: 100%;
+  }
+  #about .aboutRight .contextRightText .textContainer1, #about .aboutRight .contextRightText .textContainer2, #about .aboutRight .contextRightText .textContainer3, #about .aboutRight .contextRightText .textContainer4 {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 1.2rem;
+  }
+  body section {
+    width: 75%;
+    margin-left: 10rem;
+  }
+  .naviContainer {
+    background-color: transparent;
+    width: 7rem;
+    height: 50rem;
+    font-size: 1.2rem;
+  }
+  .naviContainer .topic {
+    width: 5.5rem;
+    height: 5.5rem;
+    padding: 1.6rem 0;
+  }
+  .naviContainer .settings {
+    width: 5.5rem;
+    height: 5.7rem;
+    padding: 0.75rem 0;
+  }
+  .naviContainer .settings i {
+    font-size: 4rem;
+  }
+  .naviContainer .settingModal .settingsHori {
+    width: 5.5rem;
+    height: 5.7rem;
+    padding: 0.4rem 0;
+    font-size: 1.2rem;
+  }
+  .naviContainer .settingModal .switch {
+    width: 40px;
+    height: 24px;
+    border: 1px;
+  }
+  .naviContainer .settingModal .slider:before {
+    position: absolute;
+    content: "";
+    height: 1.2rem;
+    width: 1.2rem;
+    left: 0.5rem;
+    bottom: 0.6rem;
+  }
+  .tecStack {
+    width: 15rem;
+    height: 15rem;
+    font-size: 1.8rem;
+    margin: auto;
+  }
+  #about .aboutRight .imgContainer {
+    display: none;
+  }
+  .cardContainer {
+    width: 80%;
+    margin: auto;
+  }
+  .cardContainer .card {
+    width: 25rem;
+    height: 25rem;
+    margin: 1rem 0;
+  }
+  .cardContainer .card .keyContainer, .cardContainer .card .valueContainer {
+    height: 16rem;
+  }
+  #projects a .projectContainer {
+    width: 30rem;
+    height: 25rem;
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (max-width: 600px) and (max-width: 992px) {
   body {
     font-size: 1.5rem;
   }
@@ -536,75 +523,4 @@ body section article {
     margin-left: 10rem;
     margin-right: 0;
   }
-  .header {
-    font-size: 6rem;
-  }
-  .co {
-    font-size: 4rem;
-  }
-  #about .aboutRight {
-    width: 35%;
-  }
-  #about .aboutRight .imgContainer {
-    height: 50%;
-  }
-  #about .aboutRight .imgContainer img {
-    scale: 1.2;
-    translate: 0 3.5rem;
-  }
-  #about .aboutTextContainer {
-    width: 65%;
-  }
-  #about .aboutTextContainer {
-    padding-top: 0rem;
-  }
-}
-@media only screen and (max-width: 768px) {
-  body section {
-    width: 80%;
-    margin-left: 10rem;
-    margin-right: 0;
-  }
-  .header {
-    font-size: 4rem;
-  }
-  .co {
-    font-size: 2.5rem;
-  }
-  .spacer {
-    height: 2rem;
-  }
-  #about .aboutLeft {
-    width: 100%;
-    margin: 0 10rem;
-  }
-  #about .aboutRight {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  #about .aboutRight .imgContainer {
-    width: 40%;
-    min-width: 25rem;
-    height: 25rem;
-  }
-  #about .aboutRight .imgContainer img {
-    scale: 1;
-    translate: 0 0;
-  }
-  #about .aboutTextContainer {
-    width: 100%;
-  }
-}
-@media only screen and (max-width: 600px) {
-  body {
-    font-size: 1.2rem;
-  }
-  body section {
-    margin: 0 0;
-    margin-left: 10rem;
-    padding-right: 0;
-  }
->>>>>>> 91a56c64ace838c32b499e3b8ba044a4eac64567
 }/*# sourceMappingURL=App.css.map */

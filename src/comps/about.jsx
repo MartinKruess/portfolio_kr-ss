@@ -9,7 +9,6 @@ export const About = () => {
 
     const heute = new Date()
     const bday = new Date(1990, 2, 1)
-    console.log(bday)
     const rawAge = heute - bday
     const age = Math.floor(rawAge/31536000000)
 

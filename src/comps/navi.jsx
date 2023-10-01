@@ -47,7 +47,6 @@ export const Navi = () => {
         <NavLink
             element={<About />}
             to="about"
-            activeClassName={"active"}
             className="topic"
             onClick={() => scrollToPage(200)}
           >
@@ -57,7 +56,6 @@ export const Navi = () => {
         <NavLink
             element={<Skills />}
             to="skills"
-            activeClassName={"active"}
             className="topic"
             onClick={() => scrollToPage(1200)}
           >
