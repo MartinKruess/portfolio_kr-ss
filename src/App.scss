@@ -28,9 +28,9 @@ body{
   src: url('/public/fonts/Teko-Regular.ttf');
 
   section{
-    width: 80%;
+    width: 82%;
     margin: var(--smallSpacer) auto;
-    padding: var(--largeSpacer) 0 var(--largeSpacer) 0rem;
+    padding: var(--largeSpacer) 0 var(--largeSpacer) 1rem;
   
     article{
       display: flex;
@@ -42,7 +42,7 @@ body{
 
 .spacer{
   width: 100%;
-  height: 20rem;
+  height: 6rem;
 }
 
 .naviContainer{
@@ -197,6 +197,7 @@ body{
   text-align: center;
   margin: 10px 0;
 }
+
 .co{
   font-size: 6rem;
 }
@@ -627,5 +628,15 @@ body{
       }
     }
   }
-}
+  
+  @media only screen and (max-width: 992px) {
+    body {
+      font-size: 1.5rem;
 
+      section{
+        width: 85%;
+        margin: 0 0;
+        margin-left: 10rem;
+        margin-right: 0;
+      }
+    }

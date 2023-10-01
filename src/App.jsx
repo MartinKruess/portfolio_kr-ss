@@ -7,7 +7,7 @@ import { Skills } from './comps/skills'
 import { Projects } from './comps/projects'
 import { Contact } from './comps/contact'
 
-function App() {
+function App(prop) {
 
   return (
     <main className="App">

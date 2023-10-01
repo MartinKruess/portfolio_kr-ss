@@ -19,6 +19,7 @@ export const About = () => {
                 <ul>
                     <li>{language ? ('Firstname:') : ('Vorname:')}</li>
                     <li>{language ? ('Lastname:') : ('Nachname:')}</li>
+                    <li>{language ? ('Contact:') : ('Kontakt:')}</li>
                     <li>{language ? ('Education') : ('Ausbildung:')}</li>
                     <li>{language ? ('Description:') : ('Beschreibung:')}</li>
                     <li>{language ? ('Hobbies:') : ('Hobbys:')}</li>
@@ -29,6 +30,7 @@ export const About = () => {
                 <ul>
                     <li>Martin</li>
                     <li>Krüss</li>
+                    <li><a href="mailto:martinkr90@googlemail.com">martinkr90@googlemail.com</a></li>
                     <li>DCI-Digital Career Institute gGmbH</li>
                     <li>Fullstack Webdeveloper <a href='https://www.mongodb.com/mern-stack' target='_blank' rel='informationabout MERM-Stack'>(MERN)</a></li>
                     <li>

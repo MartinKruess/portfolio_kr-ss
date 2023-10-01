@@ -77,7 +77,7 @@ export const Navi = () => {
             element={<Contact />}
             to="contact"
             className="topic"
-            smooth={true}
+            // smooth={true}
             duration={500}
             onClick={() => scrollToPage(10000)}
           >

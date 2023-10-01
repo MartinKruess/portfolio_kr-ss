@@ -27,9 +27,15 @@ body {
   src: url("/public/fonts/Teko-Regular.ttf");
 }
 body section {
+<<<<<<< HEAD
   width: 80%;
   margin: var(--smallSpacer) auto;
   padding: var(--largeSpacer) 0 var(--largeSpacer) 0rem;
+=======
+  width: 82%;
+  margin: var(--smallSpacer) auto;
+  padding: var(--largeSpacer) 0 var(--largeSpacer) 1rem;
+>>>>>>> 91a56c64ace838c32b499e3b8ba044a4eac64567
 }
 body section article {
   display: flex;
@@ -37,6 +43,7 @@ body section article {
   padding: var(--smallSpacer);
 }
 
+<<<<<<< HEAD
 @media only screen and (max-width: 1024px) {
   body {
     font-size: 1.5rem;
@@ -65,6 +72,11 @@ body section article {
 .spacer {
   width: 100%;
   height: 20rem;
+=======
+.spacer {
+  width: 100%;
+  height: 6rem;
+>>>>>>> 91a56c64ace838c32b499e3b8ba044a4eac64567
 }
 
 .naviContainer {
@@ -205,7 +217,12 @@ body section article {
   flex-wrap: wrap;
 }
 #about .aboutLeft {
+<<<<<<< HEAD
   width: 42%;
+=======
+  width: 50%;
+  min-width: 55rem;
+>>>>>>> 91a56c64ace838c32b499e3b8ba044a4eac64567
 }
 #about .aboutLeft ul {
   margin-left: var(--mediumSpacer);
@@ -219,6 +236,7 @@ body section article {
   text-decoration: none;
 }
 #about .aboutRight {
+<<<<<<< HEAD
   width: 55%;
   display: flex;
   flex-direction: row;
@@ -308,6 +326,37 @@ body section article {
     width: 100%;
   }
 }
+=======
+  width: 45%;
+  display: flex;
+  justify-content: flex-end;
+}
+#about .aboutRight .imgContainer {
+  background-color: rgba(204, 204, 204, 0.1333333333);
+  width: 30rem;
+  height: 30rem;
+  overflow: hidden;
+  padding: var(--mediumSpacer);
+  border: groove 0.4em rgb(182, 179, 168);
+  border-radius: 1rem;
+}
+#about .aboutRight .imgContainer img {
+  width: 100%; /* Safari 6.0 - 9.0 */
+  filter: grayscale(75%);
+  border-radius: 0.5rem;
+}
+#about .aboutTextContainer {
+  width: 100%;
+  padding-top: 3rem;
+}
+#about .aboutTextContainer .contextText {
+  width: 100%;
+}
+#about .aboutTextContainer .contextText p {
+  padding: var(--smallSpacer);
+}
+
+>>>>>>> 91a56c64ace838c32b499e3b8ba044a4eac64567
 .cardContainer {
   width: 100%;
   display: flex;
@@ -329,7 +378,11 @@ body section article {
   padding: var(--mediumSpacer);
   margin: var(--mediumSpacer);
   border: solid 1px #e33838;
+<<<<<<< HEAD
   box-shadow: 1px 1px 1px 3px rgba(216, 34, 34, 0.2), -1px -1px 1px 3px rgba(216, 34, 34, 0.2), -1px 1px 1px 3px rgba(216, 34, 34, 0.2), 1px -1px 1px 3px rgba(216, 34, 34, 0.2);
+=======
+  box-shadow: 1px 1px 3px 3px rgba(216, 34, 34, 0.2), -1px -1px 1px 3px rgba(216, 34, 34, 0.2), -1px 1px 1px 3px rgba(216, 34, 34, 0.2), 1px -1px 1px 3px rgba(216, 34, 34, 0.2);
+>>>>>>> 91a56c64ace838c32b499e3b8ba044a4eac64567
 }
 .cardContainer .card h3 {
   width: 100%;
@@ -421,7 +474,11 @@ body section article {
 }
 #projects a .projectContainer {
   width: 40rem;
+<<<<<<< HEAD
   height: 30rem;
+=======
+  height: 32rem;
+>>>>>>> 91a56c64ace838c32b499e3b8ba044a4eac64567
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -453,4 +510,101 @@ body section article {
   color: var(--Secondary);
   width: 5rem;
   font-size: 3.3rem;
+<<<<<<< HEAD
+=======
+}
+
+@media only screen and (max-width: 1424px) {
+  #about .aboutLeft {
+    width: 100vw;
+    border: none;
+  }
+  #about .aboutRight {
+    width: 28%;
+  }
+  #about .aboutTextContainer {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 992px) {
+  body {
+    font-size: 1.5rem;
+  }
+  body section {
+    width: 85%;
+    margin: 0 0;
+    margin-left: 10rem;
+    margin-right: 0;
+  }
+  .header {
+    font-size: 6rem;
+  }
+  .co {
+    font-size: 4rem;
+  }
+  #about .aboutRight {
+    width: 35%;
+  }
+  #about .aboutRight .imgContainer {
+    height: 50%;
+  }
+  #about .aboutRight .imgContainer img {
+    scale: 1.2;
+    translate: 0 3.5rem;
+  }
+  #about .aboutTextContainer {
+    width: 65%;
+  }
+  #about .aboutTextContainer {
+    padding-top: 0rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  body section {
+    width: 80%;
+    margin-left: 10rem;
+    margin-right: 0;
+  }
+  .header {
+    font-size: 4rem;
+  }
+  .co {
+    font-size: 2.5rem;
+  }
+  .spacer {
+    height: 2rem;
+  }
+  #about .aboutLeft {
+    width: 100%;
+    margin: 0 10rem;
+  }
+  #about .aboutRight {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #about .aboutRight .imgContainer {
+    width: 40%;
+    min-width: 25rem;
+    height: 25rem;
+  }
+  #about .aboutRight .imgContainer img {
+    scale: 1;
+    translate: 0 0;
+  }
+  #about .aboutTextContainer {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 1.2rem;
+  }
+  body section {
+    margin: 0 0;
+    margin-left: 10rem;
+    padding-right: 0;
+  }
+>>>>>>> 91a56c64ace838c32b499e3b8ba044a4eac64567
 }/*# sourceMappingURL=App.css.map */

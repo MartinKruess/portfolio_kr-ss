@@ -1,8 +1,17 @@
 import { useContext } from "react"
 import { SettingContext } from "../global/useContext"
 
+
+
 export const Skills = () => {
     const {language} = useContext(SettingContext)
+
+    // Legend:
+    const fine = 90
+    const good = 75
+    const okay = 50
+    const basic = 20
+
     const skills = [
         {
             titel: "Styling",
