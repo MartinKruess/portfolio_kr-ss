@@ -51,7 +51,10 @@ export const Projects = () => {
         <div className="projectContainer">
           <h4 className="projectHeader">Final Project (nicht mehr online)</h4>
           <div className="preview">
-            <img src="/images/mms-computer.jpg" alt="" />
+            <img
+              src="/images/mms-computer.jpg"
+              alt="Vorschaubild des Finalprojektes ein Online shop. Mitleriwele Offline."
+            />
           </div>
           <div className="projectDescription">
             {language
@@ -69,8 +72,8 @@ export const Projects = () => {
           <h4 className="projectHeader">Fliesenparadies</h4>
           <div className="preview">
             <img
-              src="/images/preview.png"
-              alt="Image of the Webside for Fleisenparadies Voss"
+              src="/images/fliesenparadiesVoss.png"
+              alt="Vorschau der Fleisenparadies Voss Startseite"
             />
           </div>
           <div className="projectDescription">
@@ -89,7 +92,7 @@ export const Projects = () => {
           <h4 className="projectHeader">WebDev-Collection</h4>
           <div className="preview">
             <img
-              src="/images/preview.png"
+              src="/images/webDevCollection.png"
               alt="Image of the Webside for my Students"
             />
           </div>
