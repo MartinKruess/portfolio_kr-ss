@@ -11,7 +11,7 @@
   --smallSpacer: 0.5rem;
   --mediumSpacer: 1rem;
   --largeSpacer: 2rem;
-  border: solid green;
+  // border: solid green;
 }
 
 * {
@@ -27,7 +27,7 @@ body {
   font-family: "Teko", sans-serif;
   font-size: 1.8rem;
   src: url("/public/fonts/Teko-Regular.ttf");
-  border: solid red;
+  // border: solid red;
 
   #home {
     min-height: 20svh;
@@ -38,7 +38,7 @@ body {
     grid-template-columns: 10rem 1fr;
     row-gap: 1rem;
     padding: 0 1rem 0 0;
-    border: solid yellow;
+    // border: solid yellow;
   }
 
   #about,
