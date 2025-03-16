@@ -5,11 +5,12 @@
 :root {
   font-size: 62.5%;
   --primary: #121215;
-  --primaryBG: #34363899;
+  --primaryBG: #141417;
   --Secondary: #ededed;
   --smallSpacer: 0.5rem;
   --mediumSpacer: 1rem;
   --largeSpacer: 2rem;
+  border: solid green;
 }
 
 * {
@@ -25,21 +26,36 @@ body {
   font-family: "Teko", sans-serif;
   font-size: 1.8rem;
   src: url("/public/fonts/Teko-Regular.ttf");
+  border: solid red;
 }
-body section {
-  width: 82%;
-  margin: var(--smallSpacer) auto;
+body #home {
+  min-height: 20svh;
+}
+body main {
+  display: grid;
+  grid-template-columns: 10rem 1fr;
+  row-gap: 1rem;
+  padding: 0 1rem 0 0;
+  border: solid yellow;
+}
+body #about,
+body #skills,
+body #projects {
+  padding-top: 3rem;
+  min-height: 100svh;
+  grid-column: 2/3;
+}
+body section,
+body footer {
+  background-color: var(--primaryBG);
+  margin: var(--largeSpacer) auto;
   padding: var(--largeSpacer) 1rem;
 }
-body section article {
+body section article,
+body footer article {
   display: flex;
   flex-wrap: wrap;
   padding: var(--smallSpacer);
-}
-
-.spacer {
-  width: 100%;
-  height: 6rem;
 }
 
 .naviContainer {
@@ -77,7 +93,8 @@ body section article {
 .naviContainer .settings i {
   font-size: 5rem;
 }
-.naviContainer .topic:hover, .naviContainer .settings:hover {
+.naviContainer .topic:hover,
+.naviContainer .settings:hover {
   background-color: var(--Secondary);
   color: var(--primary);
   cursor: pointer;
@@ -140,10 +157,10 @@ body section article {
   transition: 0.4s;
 }
 .naviContainer .settingModal input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #2196f3;
 }
 .naviContainer .settingModal input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #2196f3;
 }
 .naviContainer .settingModal input:checked + .slider:before {
   transform: translateX(16px);
@@ -168,7 +185,7 @@ body section article {
   text-transform: uppercase;
   font-size: 10rem;
   text-align: center;
-  margin: 10px 0;
+  margin: 1rem 0;
 }
 
 .co {
@@ -177,109 +194,59 @@ body section article {
 
 #about {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 35rem 1fr;
+  gap: 1.5rem;
 }
-#about .aboutLeft {
-  grid-column: 1/3;
-}
-#about .aboutLeft ul {
-  margin-left: var(--mediumSpacer);
-}
-#about .aboutLeft ul li {
-  line-height: 3.5rem;
-  list-style: none;
-}
-#about .aboutLeft ul li a {
-  color: rgba(255, 0, 0, 0.6);
-  text-decoration: none;
-}
-#about .aboutRight {
-  grid-column: 1/3;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 5rem;
-}
-#about .aboutRight .contextRightText {
-  grid-column: 1/3;
-}
-#about .aboutRight .contextRightText p {
-  padding: var(--smallSpacer);
-}
-#about .aboutRight .imgContainer {
-  height: 30rem;
-  width: 30rem;
+#about .imgContainer {
+  height: 31rem;
+  width: 31rem;
   max-height: 50rem;
   overflow: hidden;
   border: groove 0.4em rgb(182, 179, 168);
 }
-#about .aboutRight .imgContainer img {
+#about .imgContainer img {
   width: 95%;
-  /* Safari 6.0 - 9.0 */
   filter: grayscale(75%);
   padding-left: 5%;
-  transform: translateY(-10rem);
+  transform: translateY(-8.5rem);
+}
+#about ul {
+  margin-left: var(--mediumSpacer);
+}
+#about ul li {
+  line-height: 3.5rem;
+  list-style: none;
+}
+#about ul li a {
+  color: rgba(255, 0, 0, 0.6);
+  text-decoration: none;
+}
+#about .contextRightText {
+  grid-column: 1/3;
 }
 
 .cardContainer {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  padding: var(--mediumSpacer);
-}
-.cardContainer .introduce {
-  width: 100%;
-  text-align: center;
-  padding: var(--mediumSpacer);
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 2rem;
+  padding: 2rem;
 }
 .cardContainer .card {
-  width: 30rem;
-  height: 30rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: var(--mediumSpacer);
-  margin: var(--largeSpacer);
+  padding: var(--largeSpacer);
   border: solid 1px #e33838;
   box-shadow: 1px 1px 1px 3px rgba(216, 34, 34, 0.2), -1px -1px 1px 3px rgba(216, 34, 34, 0.2), -1px 1px 1px 3px rgba(216, 34, 34, 0.2), 1px -1px 1px 3px rgba(216, 34, 34, 0.2);
+  gap: 2rem;
 }
 .cardContainer .card h3 {
   width: 100%;
-  margin: var(--mediumSpacer);
+  font-size: 1.4rem;
   text-align: center;
 }
-.cardContainer .card .keyContainer {
-  width: 58%;
-}
-.cardContainer .card .valueContainer {
-  width: 39%;
-}
-.cardContainer .card .keyContainer, .cardContainer .card .valueContainer {
-  height: 19rem;
-  margin: auto;
-}
-.cardContainer .card .keyContainer .key, .cardContainer .card .valueContainer .key {
-  width: 100%;
-}
-.cardContainer .card .progressBar {
-  background-color: var(--primaryBG);
-  width: 100%;
-  max-height: 2.3rem;
-  text-align: center;
-  border: solid 1px #111312;
-  border-radius: 0.3rem;
-  overflow: hidden;
-}
-.cardContainer .card .progressBar .progress {
-  background-color: #4eff2f;
-  color: var(--primary);
-  font-weight: 600;
-  padding: 0;
-}
-.cardContainer .card .progressBar .progress .percent {
-  width: 18.2rem;
-  padding: 0;
-  margin-left: 4.7rem;
+.cardContainer .card img {
+  width: 50%;
 }
 
 .tecStack {
@@ -315,44 +282,34 @@ body section article {
   }
 }
 #projects {
-  display: flex;
-  flex-wrap: wrap;
   text-align: center;
-  justify-content: space-evenly;
+}
+#projects .projectContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
 }
 #projects h3 {
   font-size: 4rem;
-  width: 100%;
   margin: 2.5rem;
 }
 #projects a {
   color: var(--Secondary);
-  margin: 1.5rem;
   padding: 0;
   text-decoration: none;
 }
-#projects a .projectContainer {
-  width: 40rem;
-  height: 30rem;
+#projects a .projectCard {
+  height: 100%;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
   padding: var(--mediumSpacer);
-  border: solid red;
+  border: solid red 0.2rem;
+  gap: 1rem;
 }
-#projects a .projectContainer .projectHeader {
-  width: 100%;
+#projects a .projectCard .projectHeader {
   font-size: 2.4rem;
-  margin-bottom: var(--smallSpacer);
 }
-#projects a .projectContainer .preview {
-  width: 100%;
-}
-#projects a .projectContainer .preview img {
-  width: 100%;
-  max-height: 19rem;
-}
-#projects a .projectContainer .projectDescription {
+#projects a .projectCard .preview img {
   width: 100%;
 }
 
@@ -360,125 +317,108 @@ body section article {
   max-height: 8rem;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
 }
-.contact i {
+.contact .textLink {
+  width: auto;
+}
+.contact i,
+.contact a {
   color: var(--Secondary);
   width: 5rem;
   font-size: 3.3rem;
 }
 
-@media only screen and (max-width: 1424px) {
+@media only screen and (max-width: 1444px) {
   body {
     font-size: 1.5rem;
   }
-  #about {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: 2fr;
+  body .header {
+    font-size: 5rem;
   }
-  #about .aboutLeft, #about .aboutRight {
-    grid-column: 1/2;
+  body .co {
+    font-size: 3rem;
   }
-  #about .contextRightText {
-    grid-column: 1/2;
+  body .cardContainer {
+    grid-template-columns: repeat(6, 1fr);
   }
 }
 @media only screen and (max-width: 1024px) {
   body {
     font-size: 1.4rem;
   }
-  .header {
-    font-size: 5rem;
+  body #about {
+    grid-template-columns: 20rem 1fr;
   }
-  .co {
-    font-size: 3rem;
-  }
-  #about .aboutRight {
-    display: flex;
-    gap: 2rem;
-  }
-  #about .aboutRight .contextRightText {
-    width: 65%;
-    order: 2;
-  }
-  #about .aboutRight .imgContainer {
+  body #about .imgContainer {
     width: 20rem;
     height: 20rem;
-    order: 1;
   }
-  #about .aboutRight .imgContainer img {
-    transform: translateY(-7rem);
+  body #about .imgContainer img {
+    transform: translateY(-6rem);
   }
 }
-@media only screen and (max-width: 900px) {
-  body {
-    font-size: 1.5rem;
+@media only screen and (max-width: 992px) {
+  body section,
+  body footer {
+    margin: 0 0;
+    margin-right: 0;
   }
-  body section {
-    margin-left: 12rem;
+  body #about {
+    grid-template-columns: 1fr;
   }
-  .header {
-    font-size: 4rem;
+  body #about .contextRightText {
+    grid-column: 1/2;
   }
-  .co {
-    font-size: 2.5rem;
-  }
-  .spacer {
-    height: 5rem;
-  }
-  #about .aboutLeft {
-    width: 100%;
-  }
-  #about .aboutRight {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  #about .aboutRight .contextRightText {
-    width: 100%;
-  }
-  #about .aboutRight .contextRightText .textContainer1, #about .aboutRight .contextRightText .textContainer2, #about .aboutRight .contextRightText .textContainer3, #about .aboutRight .contextRightText .textContainer4 {
-    width: 80%;
+  body .cardContainer {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media only screen and (max-width: 600px) {
   body {
     font-size: 1.2rem;
   }
-  body section {
-    width: 75%;
-    margin-left: 10rem;
+  body #home {
+    min-height: 15svh;
   }
-  .naviContainer {
+  body .header {
+    font-size: 3rem;
+  }
+  body .co {
+    font-size: 1.8rem;
+  }
+  body .naviContainer {
     background-color: transparent;
     width: 7rem;
     height: 50rem;
     font-size: 1.2rem;
   }
-  .naviContainer .topic {
+  body .naviContainer .topic {
     width: 5.5rem;
     height: 5.5rem;
     padding: 1.6rem 0;
   }
-  .naviContainer .settings {
+  body .naviContainer .settings {
     width: 5.5rem;
     height: 5.7rem;
     padding: 0.75rem 0;
   }
-  .naviContainer .settings i {
+  body .naviContainer .settings i {
     font-size: 4rem;
   }
-  .naviContainer .settingModal .settingsHori {
+  body .naviContainer .settingModal .settingsHori {
     width: 5.5rem;
     height: 5.7rem;
     padding: 0.4rem 0;
     font-size: 1.2rem;
   }
-  .naviContainer .settingModal .switch {
+  body .naviContainer .settingModal .switch {
     width: 40px;
     height: 24px;
     border: 1px;
   }
-  .naviContainer .settingModal .slider:before {
+  body .naviContainer .settingModal .slider:before {
     position: absolute;
     content: "";
     height: 1.2rem;
@@ -486,41 +426,22 @@ body section article {
     left: 0.5rem;
     bottom: 0.6rem;
   }
-  .tecStack {
+  body .tecStack {
     width: 15rem;
     height: 15rem;
     font-size: 1.8rem;
     margin: auto;
   }
-  #about .aboutRight .imgContainer {
-    display: none;
-  }
-  .cardContainer {
-    width: 80%;
+  body #about .imgContainer {
     margin: auto;
   }
-  .cardContainer .card {
-    width: 25rem;
-    height: 25rem;
-    margin: 1rem 0;
+  body .cardContainer {
+    grid-template-columns: 1fr 1fr;
   }
-  .cardContainer .card .keyContainer, .cardContainer .card .valueContainer {
-    height: 16rem;
+  body #projects .projectContainer {
+    grid-template-columns: 1fr;
   }
-  #projects a .projectContainer {
-    width: 30rem;
-    height: 25rem;
+  body #projects a .projectCard {
     font-size: 1.4rem;
-  }
-}
-@media only screen and (max-width: 600px) and (max-width: 992px) {
-  body {
-    font-size: 1.5rem;
-  }
-  body section {
-    width: 85%;
-    margin: 0 0;
-    margin-left: 10rem;
-    margin-right: 0;
   }
 }/*# sourceMappingURL=App.css.map */

@@ -2,10 +2,10 @@ import { useContext } from "react";
 import { SettingContext } from "../global/useContext";
 
 export const Home = () => {
-  const { language } = useContext(SettingContext)
+  const { language } = useContext(SettingContext);
 
   let glowInTexts = document.querySelectorAll(".glowIn");
-  glowInTexts.forEach(glowInText => {
+  glowInTexts.forEach((glowInText) => {
     let letters = glowInText.textContent.split("");
     glowInText.textContent = "";
     letters.forEach((letter, i) => {
@@ -16,15 +16,14 @@ export const Home = () => {
     });
   });
 
-    return(
-        <section id="home">
-            <div className="headerContainer">
-              <h1 className="header">Martin Krüss</h1>
-              <h2 className="header co">
-                {language ? ('Fullstack Developer') : ('Fullstack Entwickler')}
-              </h2>
-            </div>
-            <div className="spacer"></div>
-        </section>
-    )
-}
+  return (
+    <header id="home">
+      <div className="headerContainer">
+        <h1 className="header">Martin Krüss</h1>
+        <h2 className="header co">
+          {language ? "Fullstack Developer" : "Fullstack Entwickler"}
+        </h2>
+      </div>
+    </header>
+  );
+};
