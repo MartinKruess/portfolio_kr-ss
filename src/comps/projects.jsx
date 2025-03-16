@@ -17,7 +17,7 @@ export const Projects = () => {
             <h4 className="projectHeader">StreamCollection</h4>
             <div className="preview">
               <img
-                src="/images/streamCollection.png"
+                src="/images/streamCollection.webp"
                 alt="Image of the StreamCollection Webside"
                 loading="lazy"
               />
@@ -38,7 +38,7 @@ export const Projects = () => {
             <h4 className="projectHeader">Fliesenparadies</h4>
             <div className="preview">
               <img
-                src="/images/fliesenparadiesVoß.png"
+                src="/images/fliesenparadiesVoß.webp"
                 alt="Image of the Webside for Fleisenparadies Voss"
                 loading="lazy"
               />
@@ -59,7 +59,7 @@ export const Projects = () => {
             <h4 className="projectHeader">WebDev-Collection</h4>
             <div className="preview">
               <img
-                src="/images/webDevCollection.png"
+                src="/images/webDevCollection.webp"
                 alt="Image of the Webside for my Students"
                 loading="lazy"
               />

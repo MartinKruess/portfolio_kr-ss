@@ -16,7 +16,7 @@ export const About = () => {
     <section id="about">
       <div className="imgContainer">
         <img
-          src="/images/martin_kruess.png"
+          src="/images/martin_kruess.webp"
           alt="image Martin Kruess"
           max-width="480"
           max-height="480"
