@@ -12,13 +12,13 @@ export const Skills = () => {
       </div>
       <div className="basicSkills">
         {basicSkills.map((skill, i) => (
-          <img src={skill.image} alt="" />
+          <img src={skill.image} alt={skill.alt} key={i} />
         ))}
       </div>
       <div className="cardContainer">
         {skillData.map((skill, i) => (
           <div className="card" key={i}>
-            <img src={skill.image} alt="test" loading="lazy" />
+            <img src={skill.image} alt={skill.alt} loading="lazy" />
             <h3>{skill.title}</h3>
           </div>
         ))}

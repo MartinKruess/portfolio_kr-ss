@@ -19,6 +19,7 @@ export const Projects = () => {
               <img
                 src="/images/streamCollection.png"
                 alt="Image of the StreamCollection Webside"
+                loading="lazy"
               />
             </div>
             <div className="projectDescription">
@@ -39,6 +40,7 @@ export const Projects = () => {
               <img
                 src="/images/fliesenparadiesVoß.png"
                 alt="Image of the Webside for Fleisenparadies Voss"
+                loading="lazy"
               />
             </div>
             <div className="projectDescription">
@@ -59,6 +61,7 @@ export const Projects = () => {
               <img
                 src="/images/webDevCollection.png"
                 alt="Image of the Webside for my Students"
+                loading="lazy"
               />
             </div>
             <div className="projectDescription">

@@ -25,41 +25,52 @@ body {
   background-color: var(--primary);
   color: var(--Secondary);
   font-family: "Teko", sans-serif;
-  font-size: 1.8rem;
+  font-size: 2rem;
   src: url("/public/fonts/Teko-Regular.ttf");
   // border: solid red;
+}
 
-  #home {
-    min-height: 20svh;
+#home {
+  min-height: 20svh;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 10rem 1fr;
+  row-gap: 1rem;
+  padding: 0 1rem 0 0;
+  // border: solid yellow;
+}
+
+#about,
+#skills,
+#projects {
+  padding-top: 3rem;
+  min-height: 100svh;
+  grid-column: 2/3;
+}
+
+section,
+footer {
+  background-color: var(--primaryBG);
+  margin: var(--largeSpacer) auto;
+  padding: var(--largeSpacer) 1rem;
+
+  article {
+    display: flex;
+    flex-wrap: wrap;
+    padding: var(--smallSpacer);
   }
+}
 
-  main {
-    display: grid;
-    grid-template-columns: 10rem 1fr;
-    row-gap: 1rem;
-    padding: 0 1rem 0 0;
-    // border: solid yellow;
+footer {
+  a {
+    position: relative;
+    top: 0;
   }
-
-  #about,
-  #skills,
-  #projects {
-    padding-top: 3rem;
-    min-height: 100svh;
-    grid-column: 2/3;
-  }
-
-  section,
-  footer {
-    background-color: var(--primaryBG);
-    margin: var(--largeSpacer) auto;
-    padding: var(--largeSpacer) 1rem;
-
-    article {
-      display: flex;
-      flex-wrap: wrap;
-      padding: var(--smallSpacer);
-    }
+  a:hover {
+    top: -0.5rem;
+    transition: top 0.3s;
   }
 }
 
@@ -204,7 +215,7 @@ body {
 }
 
 .header {
-  background-image: url(https://media.giphy.com/media/5k00E7cigvvqnBYDdP/giphy.gif);
+  background-image: url("/images/fontBG.webp");
   //url(https://media.giphy.com/media/eJoZAwRN9OI5QjthIE/giphy.gif);
   background-size: cover;
   color: transparent;
@@ -239,7 +250,7 @@ body {
       -webkit-filter: grayscale(75%);
       filter: grayscale(75%);
       padding-left: 5%;
-      transform: translateY(-8.5rem);
+      transform: translateY(3.5rem);
     }
   }
 
@@ -247,11 +258,11 @@ body {
     margin-left: var(--mediumSpacer);
 
     li {
-      line-height: 3.5rem;
+      line-height: 3.8rem;
       list-style: none;
 
       a {
-        color: #ff000099;
+        color: #ff0000cc;
         text-decoration: none;
       }
     }
@@ -429,7 +440,7 @@ body {
         height: 20rem;
 
         img {
-          transform: translateY(-6rem);
+          transform: translateY(2rem);
         }
       }
     }
@@ -548,7 +559,7 @@ body {
       gap: 1rem;
 
       img {
-        width: 1.8em;
+        width: 1.8rem;
       }
     }
 

@@ -15,7 +15,13 @@ export const About = () => {
   return (
     <section id="about">
       <div className="imgContainer">
-        <img src="/images/martin_kruess.png" alt="image Martin Kruess" />
+        <img
+          src="/images/martin_kruess.png"
+          alt="image Martin Kruess"
+          max-width="480"
+          max-height="480"
+          rel="preload"
+        />
       </div>
       <ul>
         <li>{language ? "Firstname:" : "Vorname:"} Martin</li>
